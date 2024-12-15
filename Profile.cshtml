@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Profilim";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="sidebar bg-light p-3 rounded">
+                <h4>Profil Menüsü</h4>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="#" class="text-decoration-none">Profil Bilgileri</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a asp-controller="Appointments" asp-action="BookAppointment" class="text-decoration-none">Randevu Al</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a asp-controller="Appointments" asp-action="MyAppointments" class="text-decoration-none">Randevularım</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+       
+<script>
+    document.getElementById("showAppointmentForm").addEventListener("click", function () {
+        document.getElementById("appointmentForm").style.display = "block";
+    });
+</script>
+
+<style>
+    .sidebar {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .list-group-item {
+        padding: 10px 15px;
+        border: none;
+    }
+
+        .list-group-item:hover {
+            background-color: #f0f0f0;
+        }
+
+    .content {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
